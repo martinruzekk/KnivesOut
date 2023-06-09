@@ -511,6 +511,10 @@ public class GameWorld {
         return suspects.get(name);
     }
 
+    public void addSuspect(Character character) {
+        this.suspects.put(character.getName(), character);
+    }
+
     /**
      * Returns all areas.
      *

@@ -22,7 +22,7 @@ public class ActionInvestigate implements IAction{
     }
 
     public String process(String[] args){
-        if(args.length == 0){
+        if(args.length < 1){
             return "Investigate what?";
         } else if(args.length > 1){
             return "You can only investigate one thing at a time.";

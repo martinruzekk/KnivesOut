@@ -23,8 +23,10 @@ public class ActionGo implements IAction{
     }
 
     public String process(String[] args) {
-        if (args.length == 0) {
+        if (args.length < 1) {
             return "You must specify a direction. You can go to: " + game.getWorld().getCurrentArea().getExitsString();
+        } else if (args.length > 1) {
+            return "You can only go to one direction at a time.";
         }
 
         String direction = args[0];

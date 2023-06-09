@@ -151,7 +151,7 @@ public class Game {
 
         if (state == GameState.WON) {
             result = "\n\nYou have won the game. Congratulations! " +
-                    "The murderer of Harlan Thrombey is indeed Ransom Thrombey. " +
+                    "The murderer of Harlan Thrombey is indeed Ransom Drysdale. " +
                     "You are a true detective!"
                     + "\n\n"
                     + result;

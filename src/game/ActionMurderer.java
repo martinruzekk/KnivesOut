@@ -26,7 +26,7 @@ public class ActionMurderer implements IAction{
         if(args.length > 1) {
             return "There is only 1 true murderer. You can mark only a single killer.";
         } else if (args.length < 1) {
-            return "You must specify the murderers name first.";
+            return "You must specify the murderer's name first.";
         } else if(!game.getWorld().isGuessUnlocked()) {
             return "I can't close the investigation yet. I haven't found all the evidence yet.";
         }

@@ -22,7 +22,7 @@ public class Inventory {
      * Instantiates a new Inventory.
      */
     public Inventory() {
-        this.items = new HashMap<>();
+        this.items = new TreeMap<>();
     }
 
     /**
@@ -86,6 +86,6 @@ public class Inventory {
      * @return the boolean
      */
     public boolean isFull() {
-        return items.size() >= 5;
+        return items.size() >= 4;
     }
 }

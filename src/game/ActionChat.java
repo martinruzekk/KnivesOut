@@ -22,7 +22,7 @@ public class ActionChat implements IAction{
     }
 
     public String process(String[] args) {
-        if (args.length == 0) {
+        if (args.length < 1) {
             return "Chat with who?";
         } else if (args.length > 1) {
             return "You can only chat one person at a time.";
@@ -39,10 +39,10 @@ public class ActionChat implements IAction{
 
         Area currentArea = game.getWorld().getCurrentArea();
 
-        if(character.getCurrentArea().equals(currentArea)){
-            return character.getChat(currentArea);
+        if(!character.getCurrentArea().equals(currentArea)){
+            return "You can't chat with " + characterName + " right now.";
         }
 
-        return "You can't chat with " + characterName + " right now.";
+        return character.getChat(currentArea);
     }
 }
