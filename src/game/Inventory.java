@@ -1,6 +1,6 @@
 package game;
 
-import java.util.HashMap;
+import java.util.*;
 import static util.RemoveEndComma.removeEndComma;
 
 /**
@@ -16,7 +16,7 @@ import static util.RemoveEndComma.removeEndComma;
  * @version 1.0
  */
 public class Inventory {
-    private HashMap<String, Item> items;
+    private Map<String, Item> items;
 
     /**
      * Instantiates a new Inventory.

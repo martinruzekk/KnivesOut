@@ -56,7 +56,7 @@ public class Character implements ICharacter {
      *
      * @return the boolean
      */
-    public boolean isMurderer() {
+    public boolean getIsMurderer() {
         return this.isMurderer;
     }
 
@@ -94,5 +94,14 @@ public class Character implements ICharacter {
      */
     public int getChatCounter() {
         return this.chatCounter;
+    }
+
+    /**
+     * Returns number of possible chats
+     *
+     * @return number of possible chats in different areas
+     */
+    public int getChatsAmount() {
+        return this.chats.size();
     }
 }

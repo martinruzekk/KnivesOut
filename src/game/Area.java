@@ -87,7 +87,7 @@ public class Area {
         String result = "";
         for (Area a : exits.values()) {
             result += a.getName();
-            if (a.isLocked()) {
+            if (a.getIsLocked()) {
                 result += " (locked)";
             }
             result += ", ";
@@ -168,7 +168,7 @@ public class Area {
      *
      * @return the boolean
      */
-    public boolean isLocked() {
+    public boolean getIsLocked() {
         return isLocked;
     }
 

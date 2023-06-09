@@ -572,6 +572,27 @@ public class GameWorld {
         return false;
     }
 
+    public boolean isDialogFinished() {
+        for (Character c : this.suspects.values()) {
+            if (c.getChatCounter() != c.getChatsAmount() && !c.getName().equals("Jacob")) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean areAllItemsFound() {
+        if(this.getInventory().hasItem("vials")
+        && this.getInventory().hasItem("report")
+        && this.hasBeenInvestigated("dogs")
+        && this.hasBeenInvestigated("footprints")) {
+            return true;
+        }
+
+        return false;
+    }
+
     /**
      * Returns current game state.
      *

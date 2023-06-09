@@ -22,6 +22,7 @@ public class ItemVials extends Item{
         this.world = world;
     }
 
+    @Override
     public String getAltDescription() {
         if(world.getSuspect("Marta").getChatCounter() == 2) {
             return super.getAltDescription();

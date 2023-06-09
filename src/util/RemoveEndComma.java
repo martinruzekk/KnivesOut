@@ -7,6 +7,11 @@ package util;
  * @version 1.0
  */
 public final class RemoveEndComma {
+
+    private RemoveEndComma() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Removes comma at the end of the string input.
      *
@@ -14,10 +19,10 @@ public final class RemoveEndComma {
      * @return the string
      */
     public static String removeEndComma(String str) {
-        str = str.trim();
-        if (str.endsWith(",")) {
-            return str.substring(0, str.length() - 1);
+        String strTrimmed = str.trim();
+        if (strTrimmed.endsWith(",")) {
+            return strTrimmed.substring(0, strTrimmed.length() - 1);
         }
-        return str;
+        return strTrimmed;
     }
 }

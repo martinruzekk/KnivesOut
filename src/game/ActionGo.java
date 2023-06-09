@@ -36,7 +36,7 @@ public class ActionGo implements IAction{
 
         Area nextArea = currentArea.getExit(direction);
 
-        if(nextArea.isLocked()) {
+        if(nextArea.getIsLocked()) {
             return "The door is locked.";
         }
 

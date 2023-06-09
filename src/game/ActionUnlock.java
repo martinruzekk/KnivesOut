@@ -36,12 +36,16 @@ public class ActionUnlock implements IAction{
 
         Area nextArea = currentArea.getExit(direction);
 
-        if (!nextArea.isLocked()) {
+        if (!nextArea.getIsLocked()) {
             return "The area is not locked.";
         }
 
         if(!game.getInventory().hasItem(direction + "_key")) {
             return "You dont have the key to unlock this area.";
+        }
+
+        if(!game.getInventory().getItem(direction + "_key").getUnlocks().equals(nextArea)) {
+            return "You can't use this item to unlock this area.";
         }
 
         nextArea.setLocked(false);

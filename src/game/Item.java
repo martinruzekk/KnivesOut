@@ -140,7 +140,7 @@ public class Item {
      * @param note the note
      */
     public void addNote(String note) {
-        if(this.name == "notepad") {
+        if(this.name.equals("notepad")) {
             this.notes.add(note);
         }
     }
@@ -155,29 +155,20 @@ public class Item {
     }
 
     /**
-     * Returns true if the item has been investigated.
-     *
-     * @return the boolean
-     */
-    public boolean isInvestigated() {
-        return this.isInvestigated;
-    }
-
-    /**
-     * Sets investigated.
-     *
-     * @param isInvestigated the is investigated
-     */
-    public void setInvestigated(boolean isInvestigated) {
-        this.isInvestigated = isInvestigated;
-    }
-
-    /**
      * Is droppable boolean.
      *
      * @return the boolean
      */
     public boolean isDroppable() {
         return this.isDroppable;
+    }
+
+    /**
+     * Returns the area that the item unlocks.
+     *
+     * @return the area the item unlocks
+     */
+    public Area getUnlocks() {
+        return this.unlocks;
     }
 }

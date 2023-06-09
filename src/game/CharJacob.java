@@ -28,28 +28,13 @@ public class CharJacob extends Character{
 
     @Override
     public String getChat(Area area) {
-        int marta = this.world.getSuspect("Marta").getChatCounter();
-        int detective = this.world.getSuspect("Detective").getChatCounter();
-        int linda = this.world.getSuspect("Linda").getChatCounter();
-        int walt = this.world.getSuspect("Walter").getChatCounter();
-        int richard = this.world.getSuspect("Richard").getChatCounter();
-        int joni = this.world.getSuspect("Joni").getChatCounter();
-        int meg = this.world.getSuspect("Meg").getChatCounter();
-
         if(area.getName().equals("library") && this.chatCounter == 0
-                && marta == 2 && detective == 1 && linda == 1 && walt == 1 && richard == 1
-                && this.world.getInventory().hasItem("vials") && this.world.getInventory().hasItem("report")) {
-
+                && this.world.isDialogFinished()
+                && this.world.areAllItemsFound()) {
             return super.getChat(area);
-        } else if(marta != 2 || detective != 1 || linda != 1 || walt != 1 || richard != 1
-                || meg != 1 || joni != 1) {
-
+        } else if(!this.world.isDialogFinished()) {
             return "I should talk to the others first.";
-        } else if (!this.world.getInventory().hasItem("vials")
-                || !this.world.getInventory().hasItem("report")
-                || !this.world.hasBeenInvestigated("dogs")
-                || !this.world.hasBeenInvestigated("footprints")) {
-
+        } else if (!this.world.areAllItemsFound()) {
             return "I should investigate everything properly first.";
         }
 

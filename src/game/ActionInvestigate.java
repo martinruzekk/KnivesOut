@@ -32,11 +32,10 @@ public class ActionInvestigate implements IAction{
 
         if (game.getInventory().hasItem(itemName)) {
             Item item = game.getInventory().getItem(itemName);
-            item.setInvestigated(true);
             return item.getDescription();
         } else if (game.getWorld().getCurrentArea().hasItem(itemName) && !game.getWorld().getCurrentArea().getItem(itemName).isPickable()) {
             Item item = game.getWorld().getCurrentArea().getItem(itemName);
-            item.setInvestigated(true);
+            game.getWorld().addInvestigatedItem(item);
             return item.getDescription();
         } else if (game.getWorld().getCurrentArea().hasItem(itemName) && game.getWorld().getCurrentArea().getItem(itemName).isPickable()) {
             return "You can't investigate that.";
