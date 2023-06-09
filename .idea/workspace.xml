@@ -5,16 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2096a80e-72cf-413f-8632-f1b9d6656936" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ActionGo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ActionHelp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ActionTerminate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GameWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/IAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionDrop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionExits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionInvestigate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionLookAround.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionMurderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionNote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionPick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionReadNotes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ActionUnlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharDetective.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharJacob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharJoni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharLinda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharMarta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharMeg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharRansom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharRichard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/CharWalter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/Character.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ICharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ItemVials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/TextUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/RemoveEndComma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ActionGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ActionGo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ActionHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ActionHelp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ActionTerminate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ActionTerminate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/IAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/IAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +53,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -49,10 +79,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -78,11 +111,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685713042808</updated>
-      <workItem from="1685713044118" duration="7273000" />
+      <workItem from="1685713044118" duration="7808000" />
+      <workItem from="1685805727245" duration="392000" />
+      <workItem from="1685806344506" duration="11442000" />
+      <workItem from="1685867304947" duration="6030000" />
+      <workItem from="1685877394313" duration="17277000" />
+      <workItem from="1685967994422" duration="249000" />
+      <workItem from="1685968273327" duration="61494000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

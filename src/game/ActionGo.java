@@ -1,8 +1,19 @@
 package game;
 
+/**
+ * The action that allows the player to move to another area.
+ *
+ * @author Martin Růžek
+ * @version 1.0
+ */
 public class ActionGo implements IAction{
     private Game game;
 
+    /**
+     * Instantiates a new Action go.
+     *
+     * @param game the game
+     */
     public ActionGo(Game game) {
         this.game = game;
     }
@@ -13,7 +24,7 @@ public class ActionGo implements IAction{
 
     public String process(String[] args) {
         if (args.length == 0) {
-            return "You must specify a direction.";
+            return "You must specify a direction. You can go to: " + game.getWorld().getCurrentArea().getExitsString();
         }
 
         String direction = args[0];
@@ -24,6 +35,11 @@ public class ActionGo implements IAction{
         }
 
         Area nextArea = currentArea.getExit(direction);
+
+        if(nextArea.isLocked()) {
+            return "The door is locked.";
+        }
+
         game.getWorld().setCurrentArea(nextArea);
 
 
