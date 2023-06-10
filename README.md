@@ -14,3 +14,4 @@ Jedná se o jednoduchou text-based hru ve které se hráč pomocí zadávání d
 ---
 ### Autor: Martin Růžek
 ### Verze: 1.0
+### [Repo](https://github.com/martinruzekk/KnivesOut)
